@@ -9,6 +9,8 @@ export const Datas = ({ foods }: PropsType) => {
   const [selectedFood, setSelectedFood] = useState<FoodProps | null>(null)
   const keys = Object.keys(foods)
 
+  console.log(foods, 'foodsfoods')
+
   return (
     <div className="bg-gray-700 py-16">
       <div className="flex flex-col gap-20 w-[85%] m-auto">
