@@ -46,7 +46,7 @@ const SignUp = () => {
     onSubmit: async (values) => {
       try {
         const response = await axios.post(
-          'http://localhost:8000/signup',
+          'https://fooddelivery-2r6v.onrender.com/signup',
           values
         )
         console.log(response)

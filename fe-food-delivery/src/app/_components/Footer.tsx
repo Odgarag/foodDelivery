@@ -22,7 +22,9 @@ export const Footer = () => {
 
   useEffect(() => {
     const getCategories = async () => {
-      const { data } = await axios.get('http://localhost:8000/allCategories')
+      const { data } = await axios.get(
+        'https://fooddelivery-2r6v.onrender.com/allCategories'
+      )
       setCategories(data.categories)
     }
     getCategories()

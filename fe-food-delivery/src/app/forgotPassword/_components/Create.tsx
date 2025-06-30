@@ -21,14 +21,17 @@ export const Create = ({ formik, prevStep }: any) => {
     e.preventDefault()
     const errors = await formik.validateForm()
     if (!errors.password && !errors.confirmPassword) {
-      const res = await fetch('http://localhost:8000/updatedPassword', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: formik.values.email,
-          password: formik.values.password,
-        }),
-      })
+      const res = await fetch(
+        'https://fooddelivery-2r6v.onrender.com/updatedPassword',
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            email: formik.values.email,
+            password: formik.values.password,
+          }),
+        }
+      )
 
       if (res.ok) {
         alert('Password reset successful!')

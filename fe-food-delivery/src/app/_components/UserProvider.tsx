@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }: PropsWithChildren) => {
   const tokenChecker = async (token: string) => {
     try {
       const response = await axios.post(
-        'http://localhost:8000/verify',
+        'https://fooddelivery-2r6v.onrender.com/verify',
         {},
         {
           headers: {

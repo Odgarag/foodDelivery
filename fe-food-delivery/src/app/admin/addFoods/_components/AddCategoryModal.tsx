@@ -26,7 +26,7 @@ const AddCategoryModal = ({ onClose, onSuccess }: Props) => {
       setLoading(true)
 
       await axios.post(
-        'http://localhost:8000/addCategory',
+        'https://fooddelivery-2r6v.onrender.com/addCategory',
         { categoryName: name },
         {
           headers: {

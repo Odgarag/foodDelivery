@@ -46,7 +46,7 @@ const OrdersPage = () => {
         if (!token) return
 
         const res = await axios.get(
-          'http://localhost:8000/admin/getAllOrders',
+          'https://fooddelivery-2r6v.onrender.com/admin/getAllOrders',
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -80,7 +80,7 @@ const OrdersPage = () => {
       }
       const updateOrders = [{ orderId: id, status: status }]
       await axios.put(
-        `http://localhost:8000/admin/order/update`,
+        `https://fooddelivery-2r6v.onrender.com/admin/order/update`,
         {
           orders: updateOrders,
         },

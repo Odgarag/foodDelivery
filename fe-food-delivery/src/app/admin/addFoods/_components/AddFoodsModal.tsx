@@ -22,7 +22,7 @@ type Props = {
   onSuccess: () => void
 }
 
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = 'https://fooddelivery-2r6v.onrender.com'
 
 const AddFoodsModal = ({
   category,

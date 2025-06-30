@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8000/foods')
+      .get('https://fooddelivery-2r6v.onrender.com/foods')
       .then((res) => {
         const list: FoodProps[] = res.data.foods
 

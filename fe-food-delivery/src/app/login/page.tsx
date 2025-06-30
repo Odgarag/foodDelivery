@@ -26,10 +26,13 @@ const LogIn = () => {
     validationSchema: validationSchemaLogin,
     onSubmit: async (values) => {
       try {
-        const response = await axios.post('http://localhost:8000/login', {
-          email: values.email,
-          password: values.password,
-        })
+        const response = await axios.post(
+          'https://fooddelivery-2r6v.onrender.com/login',
+          {
+            email: values.email,
+            password: values.password,
+          }
+        )
 
         localStorage.setItem('token', response.data.token)
         await tokenChecker(response.data.token)

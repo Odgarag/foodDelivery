@@ -29,7 +29,7 @@ app.use(OrderRouter)
 app.use(AdminRouter)
 
 app.listen(8000, () => {
-  console.log(`running on http://localhost:8000`)
+  console.log(`running on https://fooddelivery-2r6v.onrender.com`)
 })
 // whpebfcvlmipeybr
 // app.get('/sendOtp', async (request: Request, response: Response) => {

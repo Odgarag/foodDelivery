@@ -60,7 +60,7 @@ const SheetComponent = () => {
 
     try {
       const response = await axios.get(
-        'http://localhost:8000/getOrdersByUserId',
+        'https://fooddelivery-2r6v.onrender.com/getOrdersByUserId',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -101,7 +101,7 @@ const SheetComponent = () => {
 
     try {
       const res = await axios.post(
-        'http://localhost:8000/createOrder',
+        'https://fooddelivery-2r6v.onrender.com/createOrder',
         {
           totalPrice: grandTotal,
           foodOrderItems,
