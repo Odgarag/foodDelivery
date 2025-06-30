@@ -13,7 +13,7 @@ type FoodProps = {
   category: string
 }
 
-export default function Home() {
+export default function HomePage() {
   const [foods, setFoods] = useState<Record<string, FoodProps[]>>({})
 
   useEffect(() => {
@@ -21,18 +21,7 @@ export default function Home() {
       const { data } = await axios.get(
         'https://fooddelivery-2r6v.onrender.com/foods'
       )
-      const list: FoodProps[] = data.foods
-
-      const grouped: Record<string, FoodProps[]> = {}
-
-      list?.forEach((item) => {
-        if (!grouped[item.category]) {
-          grouped[item.category] = []
-        }
-        grouped[item.category].push(item)
-      })
-
-      setFoods(grouped)
+      setFoods(data.foods)
     }
 
     getFoods()
@@ -41,6 +30,7 @@ export default function Home() {
   return (
     <div>
       <img src="/BG.png" />
+
       <Datas foods={foods} />
     </div>
   )
